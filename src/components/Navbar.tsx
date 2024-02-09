@@ -36,7 +36,7 @@ export default function Navbar({darkmode, setDarkmode}: {darkmode: Theme, setDar
             initial={{y: -100}}
             animate={{y: 0}}
             transition={{duration: 1}}
-            className="bg-background py-2 absolute w-screen z-10 flex gap-5 justify-between px-[25%] items-center shadow-md">
+            className="bg-background py-2 absolute w-screen z-10 flex gap-5 justify-center md:justify-between md:px-[25%] px-[5%] items-center shadow-md">
                 <img src={borrielogo} alt="Bjorn" className="h-[5vh]" />
                 <div className="flex items-center justify-center gap-5">
                 <Link to="/">Home</Link>
