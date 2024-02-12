@@ -30,10 +30,10 @@ export function Home() {
             </div>
           </div>
           <div className="flex gap-2 mt-5">
-            <Link to={'/projects'} className="px-3 py-2 transition-all border-2 border-solid shadow-md border-primary rounded-xl hover:bg-primary hover:text-white">
+            <Link to={'/projects'} className="px-3 z-50 py-2 transition-all border-2 border-solid shadow-md border-primary rounded-xl hover:bg-primary hover:text-white">
               Projects
             </Link>
-            <Link to={'/about'} className="px-3 py-2 hover:text-blue-500 hover:underline">
+            <Link to={'/about'} className="px-3 z-50 py-2 hover:text-blue-500 hover:underline">
               About
             </Link>
           </div>

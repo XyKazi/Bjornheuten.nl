@@ -58,7 +58,7 @@ function Card({ title, description, image, url, disabled = false }: { title: str
         <p className="w-[40%] mx-auto mb-5 text-center text-gray-500">{description}</p>
       </div>
       {!disabled ? (
-        <a href={url} className="w-full px-3 py-2 mt-auto font-bold text-center transition-all border-2 border-solid shadow-md border-primary rounded-xl hover:bg-primary hover:text-white">
+        <a href={url} className="w-full z-50 px-3 py-2 mt-auto font-bold text-center transition-all border-2 border-solid shadow-md border-primary rounded-xl md:hover:bg-primary md:hover:text-white">
           Visit
         </a>
       ) : (
