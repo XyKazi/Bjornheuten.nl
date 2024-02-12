@@ -22,7 +22,7 @@ export function About() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="mt-2 flex flex-col p-5 border-[1px] border-solid border-white/10 bg-background/50 backdrop-blur-md rounded-xl max-w-[40%]"
+        className="mt-2 flex flex-col p-5 border-[1px] border-solid border-white/10 bg-background/50 md:backdrop-blur-md rounded-xl md:max-w-[40%]"
       >
         <p className="p-2 border-b-2 border-solid border-white/10">
           Hello, I'm Bjorn Heuten, a 17-year-old software developer from the Netherlands. I'm currently studying Software Development at the ROC van Twente.

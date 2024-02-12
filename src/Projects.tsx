@@ -18,7 +18,7 @@ export function Projects() {
       >
         <h1 className="text-4xl font-bold">Projects</h1>
       </motion.div>
-      <div className="grid grid-cols-2 gap-3 mt-5 px-[20vw]">
+      <div className="md:grid mt-[70vh] grid-cols-2 md:gap-3 md:mt-5 md:px-[20vw]">
         {[
           {
             title: "Hostvio",
@@ -51,7 +51,7 @@ export function Projects() {
 
 function Card({ title, description, image, url, disabled = false }: { title: string; description: string; image: string; url: string; disabled?: boolean }) {
   return (
-    <motion.div className="h-full flex flex-col p-5 border-[1px] border-solid border-white/10 bg-background/50 backdrop-blur-md rounded-xl">
+    <motion.div className="h-full flex flex-col md:mb-0 mb-20 p-5 border-[1px] border-solid border-white/10 bg-background/50 md:backdrop-blur-md rounded-xl">
       <img src={image} alt={title} className="h-[15rem] aspect-square object-contain" />
       <h1 className="mt-2 text-xl font-bold text-center text-text">{title}</h1>
       <div className="flex items-center justify-center h-full">
