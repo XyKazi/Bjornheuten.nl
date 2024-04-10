@@ -9,6 +9,7 @@ import Box from './Shapes/box.jsx'
 import { ScrollControls } from '@react-three/drei'
 import AboutBox from './Shapes/about.jsx'
 import "./assets/index.js"
+import Skills from './Shapes/Skills.jsx'
 
 
 const windowheight = window.innerHeight;
@@ -42,6 +43,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Suspense fallback={null}>
       <Box/>
       <AboutBox />
+      <Skills/>
       </Suspense>
         </ScrollControls>
     </Canvas>

@@ -60,7 +60,49 @@ export default function Home() {
 
       </Section>
       <Section>
-        <h1 className="text-white">Hello 3</h1>
+        <div className="w-screen flex flex-col justify-start items-start px-[10rem]">
+          <div className="flex flex-col gap-[3rem] justify-start items-center w-1/2 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30 py-16">
+            <h1 className="text-white font-bold text-7xl">
+              Skills
+            </h1>
+            <div className="flex flex-col w-3/4 gap-[2rem]">
+              <div>
+              <h2 className="text-white font-bold text-2xl">HTML</h2>
+              <div className="w-full overflow-hidden bg-gray-50 mt-2 h-5 rounded-xl">
+                <div className="w-[90%] h-full bg-orange-500 text-white font-bold text-sm text-center" > 90%</div>
+              </div>
+              </div>
+              <div>
+              <h2 className="text-white font-bold text-2xl">CSS</h2>
+              <div className="width-full overflow-hidden mt-2 bg-gray-50 h-5 rounded-xl">
+                <div className="w-[80%] h-full bg-blue-500 text-white font-bold text-sm text-center" > 80%</div>
+              </div>
+              </div>
+              <div>
+              <h2 className="text-white font-bold text-2xl">JavaScript</h2>
+              <div className="w-full overflow-hidden mt-2 bg-gray-50 h-5 rounded-xl">
+                <div className="w-[75%] h-full bg-yellow-500 text-white font-bold text-sm text-center" >75% </div>
+                </div>
+              </div>
+              <div>
+              <h2 className="text-white font-bold text-2xl">React</h2>
+              <div className="w-full overflow-hidden mt-2 bg-gray-50 h-5 rounded-xl">
+                <div className="w-[70%] h-full bg-blue-500 text-white font-bold text-sm text-center" >70%</div>
+                </div>
+              </div>
+           
+            <div>
+              <h2 className="text-white font-bold text-2xl">PHP</h2>
+              <div className="w-full overflow-hidden mt-2 bg-gray-50 h-5 rounded-xl">
+                <div className="w-[67%] h-full bg-purple-500 text-white font-bold text-sm text-center" >67%</div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section>
+        test
       </Section>
       </Scroll>
   )
