@@ -18,7 +18,7 @@ const Point = ({ position, color, randomPosition }) => {
     var visible = true;
   useFrame(() => {
     gsap.set(ref.current.position, {
-            y: ref.current.position.y - 155 + data.offset * 180,
+            y: ref.current.position.y - 145 + data.offset * 210,
             x: ref.current.position.x - 40, 
     })
   });

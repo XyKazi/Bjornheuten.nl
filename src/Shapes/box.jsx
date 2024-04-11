@@ -17,7 +17,7 @@ const Point = ({ position, color, randomPosition }) => {
     const data = useScroll();
   useFrame(() => {
     gsap.set(ref.current.position, {
-            y: ref.current.position.y + data.offset * 180,
+            y: ref.current.position.y + data.offset * 210,
     })
   });
 

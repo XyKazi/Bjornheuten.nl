@@ -1,5 +1,6 @@
 import { Scroll }  from "@react-three/drei"
 import CatapultSwiper from "./components/catapult-swiper"
+import HostvioSwiper from "./components/hostvio-swiper"
 
 const Section = (props) => {
   return (
@@ -134,6 +135,10 @@ export default function Home() {
                 <h1 className="text-white font-bold text-5xl">
                   Hostvio
                 </h1>
+                <p className="text-white text-lg">
+                I'm currently helping some friends with an hosting company called "Hostvio", Hostvio is an hosting company that offers web hosting, VPS hosting, and domain registration. I'm responsible for creating the website, and making sure everything works correctly. I'm also responsible for making sure the website is up to date.
+                </p>
+                <HostvioSwiper/>
               </div>
             </div>
         

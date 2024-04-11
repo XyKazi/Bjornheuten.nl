@@ -15,7 +15,7 @@ const Point = ({ position, color, randomPosition }) => {
 
     useFrame(() => {
         gsap.set(ref.current.position, {
-            y: ref.current.position.y - 45 + data.offset * 180,
+            y: ref.current.position.y - 45 + data.offset * 210,
             x: ref.current.position.x - 25,
         })
     })

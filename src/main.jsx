@@ -38,7 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         }
         }>
 
-      <ScrollControls onPageChange={console.log("page changed")} pages={5}>
+      <ScrollControls onPageChange={console.log("page changed")} pages={6}>
         <Home/>
 
       <directionalLight/>
