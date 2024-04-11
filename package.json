@@ -15,11 +15,15 @@
     "@react-three/fiber": "^8.16.1",
     "@types/three": "^0.163.0",
     "gsap": "^3.12.5",
+    "photoswipe": "^5.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fancybox": "^0.2.5",
+    "react-photoswipe-gallery": "^3.0.1",
     "react-scroll": "^1.9.0",
     "react-scroll-trigger": "^0.6.14",
     "svg-path-bounding-box": "^1.0.4",
+    "swiper": "^11.1.1",
     "three": "^0.163.0"
   },
   "devDependencies": {

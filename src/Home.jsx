@@ -1,6 +1,7 @@
 import { Scroll }  from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import Box from "./Shapes/box"
+import CatapultSwiper from "./components/catapult-swiper"
 
 
 const Section = (props) => {
@@ -10,6 +11,17 @@ const Section = (props) => {
     >
       <div className="w-full flex items-center justify-center">
             {props.children}
+      </div>
+    </section>
+  )
+}
+
+const ProjectSection = (props) => {
+  return (
+    <section
+    className="flex flex-col justify-center p-10 mt-[20vh]">
+      <div className="w-full flex items-center justify-center">
+        {props.children}
       </div>
     </section>
   )
@@ -101,9 +113,38 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section>
-        test
-      </Section>
+      <ProjectSection>
+      <div className="w-screen flex flex-col gap-12 justify-start items-center px-[10rem]">
+          <div className="flex flex-col gap-[3rem] justify-start items-center w-4/5 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30 py-16">
+              <h1 className="text-white font-bold text-7xl">
+                Projects/internship
+              </h1>
+            </div>
+            <div className="w-4/5 flex flex-row items-center justify-end">
+            <div className="flex min-h-[25rem] flex-col gap-[3rem] justify-start items-start w-4/5 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30 py-16">
+            <h1 className="text-white font-bold text-5xl">
+              Catapult creëert
+            </h1>
+            <p className="text-white text-lg">
+            I was an intern at Catapult Creëert, a company that creates design and marketing solutions for companies. I was responsible for creating some websites for clients, or fixing some bugs on the website. I really enjoyed my time at Catapult Creëert, I learned a lot about web development, like how to
+            work with wordpress and php.<br/> Here are a few screenshots of the websites I created.
+            </p>
+            <CatapultSwiper/>
+          </div>
+            </div>
+            <div className="w-4/5 flex flex-row items-center justify-end">
+              <div className="flex min-h-2 flex-col gap-12 justify-start items-start w-4/5 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30 py-16">
+                <h1 className="text-white font-bold text-5xl">
+                  Hostvio
+                </h1>
+              </div>
+            </div>
+        
+
+      </div>
+
+      
+      </ProjectSection>
       </Scroll>
   )
 }

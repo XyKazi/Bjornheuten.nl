@@ -15,7 +15,7 @@ const Point = ({ position, color, randomPosition }) => {
 
     useFrame(() => {
         gsap.set(ref.current.position, {
-            y: ref.current.position.y - 50 + data.offset * 150,
+            y: ref.current.position.y - 45 + data.offset * 180,
             x: ref.current.position.x - 25,
         })
     })
@@ -82,13 +82,19 @@ export default function AboutBox() {
     }
     return (
             <group >
-                {pointsInner.map((point) => (
-                    <Point
-                     key={point.idx} 
-                     position={point.position} 
-                     randomPosition={shuffleArray([...array]).position}
-                     color={"white"}/>
-              ))}
+                {pointsInner.map((point) => {
+                    var randomPosition = shuffleArray([...array]).position;
+                    // remove the randomPosition from the array
+                    array = array.filter((item) => item.position !== randomPosition);
+                    return (
+                        <Point
+                        key={point.idx} 
+                        position={point.position} 
+                        randomPosition={randomPosition}
+                        color={"white"}/>
+                    )
+
+                    })}
             </group>
     );
 }

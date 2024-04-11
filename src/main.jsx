@@ -10,6 +10,7 @@ import { ScrollControls } from '@react-three/drei'
 import AboutBox from './Shapes/about.jsx'
 import "./assets/index.js"
 import Skills from './Shapes/Skills.jsx'
+import Catapult from './Shapes/catapult.jsx'
 
 
 const windowheight = window.innerHeight;
@@ -36,12 +37,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         }
         }>
 
-      <ScrollControls onPageChange={console.log("page changed")} pages={4}>
+      <ScrollControls onPageChange={console.log("page changed")} pages={5}>
         <Home/>
 
       <directionalLight/>
       <Suspense fallback={null}>
       <Box/>
+      <Catapult/>
       <AboutBox />
       <Skills/>
       </Suspense>

@@ -20,12 +20,21 @@ dependencies:
   gsap:
     specifier: ^3.12.5
     version: 3.12.5
+  photoswipe:
+    specifier: ^5.4.3
+    version: 5.4.3
   react:
     specifier: ^18.2.0
     version: 18.2.0
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-fancybox:
+    specifier: ^0.2.5
+    version: 0.2.5(react-dom@18.2.0)(react@18.2.0)
+  react-photoswipe-gallery:
+    specifier: ^3.0.1
+    version: 3.0.1(photoswipe@5.4.3)(prop-types@15.8.1)(react@18.2.0)
   react-scroll:
     specifier: ^1.9.0
     version: 1.9.0(react-dom@18.2.0)(react@18.2.0)
@@ -35,6 +44,9 @@ dependencies:
   svg-path-bounding-box:
     specifier: ^1.0.4
     version: 1.0.4
+  swiper:
+    specifier: ^11.1.1
+    version: 11.1.1
   three:
     specifier: ^0.163.0
     version: 0.163.0
@@ -1344,6 +1356,10 @@ packages:
     resolution: {integrity: sha512-WcvhVRjXLKFB/kmOFVwELtMxyhq3iM/MvmXcyCe2PNf166c39mptscOc/45TTS96n2gpNV2z7+NakArTWZCQ3w==}
     dev: true
 
+  /chain-function@1.0.1:
+    resolution: {integrity: sha512-SxltgMwL9uCko5/ZCLiyG2B7R9fY4pDZUw7hJ4MhirdjBLosoDqkWABi3XMucddHdLiFJMb7PD2MZifZriuMTg==}
+    dev: false
+
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
     engines: {node: '>=4'}
@@ -1531,6 +1547,12 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dom-helpers@3.4.0:
+    resolution: {integrity: sha512-LnuPJ+dwqKDIyotW1VzmOZ5TONUN7CwkCR5hrgawTUbkBGYdeoNLZo6nNfGkCrjtE1nXXaj7iMMpDa8/d9WoIA==}
+    dependencies:
+      '@babel/runtime': 7.24.4
+    dev: false
 
   /draco3d@1.5.7:
     resolution: {integrity: sha512-m6WCKt/erDXcw+70IJXnG7M3awwQPAsZvJGX5zY7beBqpELw6RDGkYVU0W43AFxye4pDZ5i2Lbyc/NNGqwjUVQ==}
@@ -2714,6 +2736,11 @@ packages:
       minipass: 7.0.4
     dev: true
 
+  /photoswipe@5.4.3:
+    resolution: {integrity: sha512-9UC6oJBK4oXFZ5HcdlcvGkfEHsVrmE4csUdCQhEjHYb3PvPLO3PG7UhnPuOgjxwmhq5s17Un5NUdum01LgBDng==}
+    engines: {node: '>= 0.12.0'}
+    dev: false
+
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
     dev: true
@@ -2840,6 +2867,17 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
+  /react-addons-css-transition-group@15.6.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-M5AJydHOUGq+YujoQLL8f9mQ0QLqxjqHUpWyvUmWVCYi93iGz53HwNBwzHbr0u21KABoPzyLYZZgMk974uPovw==}
+    peerDependencies:
+      react: ^15.4.2
+    dependencies:
+      react: 18.2.0
+      react-transition-group: 1.2.1(react-dom@18.2.0)(react@18.2.0)
+    transitivePeerDependencies:
+      - react-dom
+    dev: false
+
   /react-composer@5.0.3(react@18.2.0):
     resolution: {integrity: sha512-1uWd07EME6XZvMfapwZmc7NgCZqDemcvicRi3wMJzXsQLvZ3L7fTHVyPy1bZdnWXM4iPjYuNE+uJ41MLKeTtnA==}
     peerDependencies:
@@ -2859,8 +2897,29 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-fancybox@0.2.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-r+IzD737GbBsa+S+TVV/uFz7cwVc/UsYCxD1HoWrSF57gsiatAuW/sg2HYeBf38wxCr0neS7p8YgfTPigH7wTQ==}
+    dependencies:
+      react-addons-css-transition-group: 15.6.2(react-dom@18.2.0)(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  /react-photoswipe-gallery@3.0.1(photoswipe@5.4.3)(prop-types@15.8.1)(react@18.2.0):
+    resolution: {integrity: sha512-5RS/72iPNMieDneAxhTB9uT39Gp9E1JAgv83FUZJzFOnZRcJezneiRuXcU+0Wi7VJ7hRU7A+R5ocZpMVacUrYA==}
+    peerDependencies:
+      photoswipe: '>= 5.2.2'
+      prop-types: '>= 15.7.0'
+      react: '>= 16.8.0'
+    dependencies:
+      photoswipe: 5.4.3
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
 
   /react-reconciler@0.27.0(react@18.2.0):
     resolution: {integrity: sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA==}
@@ -2903,6 +2962,21 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /react-transition-group@1.2.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CWaL3laCmgAFdxdKbhhps+c0HRGF4c+hdM4H23+FI1QBNUyx/AMeIJGWorehPNSaKnQNOAxL7PQmqMu78CDj3Q==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0
+      react-dom: ^15.0.0 || ^16.0.0
+    dependencies:
+      chain-function: 1.0.1
+      dom-helpers: 3.4.0
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      warning: 3.0.0
     dev: false
 
   /react-use-measure@2.1.1(react-dom@18.2.0)(react@18.2.0):
@@ -3266,6 +3340,11 @@ packages:
     resolution: {integrity: sha512-OIWR6bKzXvdXYyO4DK/UWa1VA1JeKq8E+0ug2DG98Y/vOmMpfZNj+TIG988HjfYSqtcy/hFOtZq/n/j5GSESNg==}
     dev: false
 
+  /swiper@11.1.1:
+    resolution: {integrity: sha512-jGmEA/fNz1lACIcY4/40ggm1Gcyv+EUivmgV/Jd2WFPsEJhbWXnRAwzZR8OPjkBLtDxmzcoYG/iiAMWfRs0YKQ==}
+    engines: {node: '>= 4.7.0'}
+    dev: false
+
   /tailwindcss@3.4.3:
     resolution: {integrity: sha512-U7sxQk/n397Bmx4JHbJx/iSOOv5G+II3f1kpLpY2QeUv5DcPdcTsYLlusZfq1NthHS1c1cZoyFmmkex1rzke0A==}
     engines: {node: '>=14.0.0'}
@@ -3528,6 +3607,12 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /warning@3.0.0:
+    resolution: {integrity: sha512-jMBt6pUrKn5I+OGgtQ4YZLdhIeJmObddh6CsibPxyQ5yPZm1XExSyzC1LCNX7BzhxWgiHmizBWJTHJIjMjTQYQ==}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
 
   /webgl-constants@1.1.1:
     resolution: {integrity: sha512-LkBXKjU5r9vAW7Gcu3T5u+5cvSvh5WwINdr0C+9jpzVB41cjQAP5ePArDtk/WHYdVj0GefCgM73BA7FlIiNtdg==}

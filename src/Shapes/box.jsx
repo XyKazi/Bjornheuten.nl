@@ -15,10 +15,9 @@ gsap.registerPlugin(useGSAP);
 const Point = ({ position, color, randomPosition }) => {
     const ref = useRef();
     const data = useScroll();
-    var visible = true;
   useFrame(() => {
     gsap.set(ref.current.position, {
-            y: ref.current.position.y + data.offset * 150,
+            y: ref.current.position.y + data.offset * 180,
     })
   });
 
@@ -82,16 +81,24 @@ export default function Box() {
         }
       
         return array.splice(currentIndex, 1)[0];
+        
     }
     return (
+        
             <group >
-                {pointsInner.map((point) => (
-                    <Point
-                     key={point.idx} 
-                     position={point.position} 
-                     randomPosition={shuffleArray([...array]).position}
-                     color={"white"}/>
-              ))}
+                {pointsInner.map((point) => {
+                                        var randomPosition = shuffleArray([...array]).position;
+                                        // remove the randomPosition from the array
+                                        array = array.filter((item) => item.position !== randomPosition);
+                    return (
+                    
+                        <Point
+                         key={point.idx} 
+                         position={point.position} 
+                         randomPosition={randomPosition}
+                         color={"white"}/>
+                  )
+                } )}
             </group>
     );
 }

@@ -1,7 +1,7 @@
 import { Sphere, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { pointsInner } from "./utilsskills";
+import { pointsInner, aboutpointsInner } from "./utilscatapult";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useState, useLayoutEffect } from "react";
@@ -18,9 +18,9 @@ const Point = ({ position, color, randomPosition }) => {
     var visible = true;
   useFrame(() => {
     gsap.set(ref.current.position, {
-            y: ref.current.position.y - 90 + data.offset * 180,
-            x: ref.current.position.x + 30,
-        })
+            y: ref.current.position.y - 155 + data.offset * 180,
+            x: ref.current.position.x - 40, 
+    })
   });
 
     useGSAP(() => {
@@ -65,7 +65,7 @@ const Point = ({ position, color, randomPosition }) => {
     );
 };
 
-export default function Skills() {
+export default function Catapult() {
     var array = pointsInner;
     const shuffleArray = (array) => {
         let currentIndex = array.length,  randomIndex;
@@ -84,20 +84,22 @@ export default function Skills() {
       
         return array.splice(currentIndex, 1)[0];
     }
+
+    var aboutArray = aboutpointsInner;
     return (
             <group >
-                {pointsInner.map((point) => {
+                {pointsInner.map((point, index) => {
                     var randomPosition = shuffleArray([...array]).position;
                     // remove the randomPosition from the array
                     array = array.filter((item) => item.position !== randomPosition);
-                        return (
-                            <Point
-                                key={point.idx} 
-                                position={point.position} 
-                                randomPosition={randomPosition}
-                                color={"white"}
-                            />
-                        )
+                    return (
+                        <Point
+                            key={point.idx} 
+                            position={point.position} 
+                            randomPosition={randomPosition}
+                            color={"white"}
+                        />
+                    );
                 })}
             </group>
     );
