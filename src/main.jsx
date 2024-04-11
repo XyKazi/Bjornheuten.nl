@@ -26,9 +26,9 @@ const windowheight = window.innerHeight;
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode className="bg-zinc-900">
-    <div className="h-screen relative z-10 w-full bg-zinc-900">
-        <Canvas className='absolute top-0 -z-10' 
+  <React.StrictMode>
+    <div className="h-screen relative z-10 w-full bg-[url('/6213209.jpg')] bg-black bg-opacity-0">
+        <Canvas className='absolute top-0 -z-10 bg-black bg-opacity-50' 
                 camera={
                         {
                           position: [0, 0, 35],
