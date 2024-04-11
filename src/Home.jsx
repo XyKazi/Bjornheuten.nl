@@ -1,13 +1,10 @@
 import { Scroll }  from "@react-three/drei"
-import { Canvas } from "@react-three/fiber"
-import Box from "./Shapes/box"
 import CatapultSwiper from "./components/catapult-swiper"
-
 
 const Section = (props) => {
   return (
     <section
-    className="h-screen flex flex-col justify-center p-10"
+    className="h-screen flex flex-col justify-center mt-40 md:mt-0 md:p-10"
     >
       <div className="w-full flex items-center justify-center">
             {props.children}
@@ -19,7 +16,7 @@ const Section = (props) => {
 const ProjectSection = (props) => {
   return (
     <section
-    className="flex flex-col justify-center p-10 mt-[20vh]">
+    className="flex flex-col justify-center p-md-10 mt-[20vh]">
       <div className="w-full flex items-center justify-center">
         {props.children}
       </div>
@@ -31,10 +28,10 @@ export default function Home() {
   return (
     <Scroll html>
       <Section>
-      <div className=" w-screen flex flex-col justify-center items-center">
-        <div className="flex flex-col gap-[3rem] justify-center items-center w-1/2 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30  py-16 ">
-        <h1 className="text-white font-bold text-9xl">Bjorn Heuten</h1>
-        <div className="text-white text-lg flex flex-row w-2/3 justify-between">
+      <div className=" w-full h-screen flex flex-col justify-center items-center">
+        <div className="flex flex-col gap-[3rem] justify-center items-center w-full xl:w-2/3 2xl:w-1/2 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30  py-16 ">
+        <h1 className="text-white font-bold text-5xl xl:text-8xl">Bjorn Heuten</h1>
+        <div className="text-white text-lg flex flex-col gap-4 xl:flex-row w-2/3 justify-between">
           <p><strong>Location:</strong><br/>Netherlands</p>
           <p><strong>Education:</strong><br/>MBO 4 Software Developer</p>
           <p><strong>Age:</strong><br/>18 years old</p>
@@ -49,9 +46,9 @@ export default function Home() {
 
       </Section>
       <Section>
-        <div id="about" className="w-screen flex flex-col justify-end items-end px-[10rem] about">
-          <div className="flex flex-col gap-[3rem] justify-end items-center w-1/2 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30 py-16">
-            <h1 className="text-white font-bold text-7xl">About me</h1>
+        <div id="about" className="w-full flex flex-col md:justify-end items-center justify-center md:items-end ">
+          <div className="flex flex-col gap-[3rem] justify-end items-center xl:w-1/2 mt-96 md:mt-0 bg-zinc-800 md:mr-24 px-8 rounded-xl shadow-lg bg-opacity-30 py-16">
+            <h1 className="text-white font-bold text-5xl xl:text-8xl">About me</h1>
             <div className="text-white text-lg flex flex-col gap-[3rem] w-2/3 justify-center">
               <p>
               Hello, I'm Bjorn Heuten, a 18-year-old software developer from the Netherlands. I'm currently studying Software Development at the ROC van Twente.<br/>
@@ -72,15 +69,15 @@ export default function Home() {
 
       </Section>
       <Section>
-        <div className="w-screen flex flex-col justify-start items-start px-[10rem]">
-          <div className="flex flex-col gap-[3rem] justify-start items-center w-1/2 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30 py-16">
-            <h1 className="text-white font-bold text-7xl">
+        <div className="w-screen flex flex-col justify-start items-start mt-96 md:mt-0  xl:px-[10rem]">
+          <div className="flex flex-col gap-[3rem] justify-start items-center mt-96 md:mt-0  xl:w-1/2 w-full bg-zinc-800 xl:px-8 rounded-xl shadow-lg bg-opacity-30 md:py-16">
+            <h1 className="text-white font-bold text-5xl xl:text-8xl pt-14 md:pt-0">
               Skills
             </h1>
             <div className="flex flex-col w-3/4 gap-[2rem]">
-              <div>
-              <h2 className="text-white font-bold text-2xl">HTML</h2>
-              <div className="w-full overflow-hidden bg-gray-50 mt-2 h-5 rounded-xl">
+              <div className="">
+              <h2 className="text-white font-bold text-xl">HTML</h2>
+              <div className="width-full overflow-hidden mt-2 bg-gray-50 h-5 rounded-xl">
                 <div className="w-[90%] h-full bg-orange-500 text-white font-bold text-sm text-center" > 90%</div>
               </div>
               </div>
