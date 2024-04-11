@@ -11,6 +11,7 @@ import AboutBox from './Shapes/about.jsx'
 import "./assets/index.js"
 import Skills from './Shapes/Skills.jsx'
 import Catapult from './Shapes/catapult.jsx'
+import Hostvio from './Shapes/hostvio.jsx'
 
 
 const windowheight = window.innerHeight;
@@ -42,6 +43,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
       <directionalLight/>
       <Suspense fallback={null}>
+        <Hostvio/>
       <Box/>
       <Catapult/>
       <AboutBox />
