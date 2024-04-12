@@ -1,6 +1,8 @@
 import { Scroll }  from "@react-three/drei"
 import CatapultSwiper from "./components/catapult-swiper"
 import HostvioSwiper from "./components/hostvio-swiper"
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Section = (props) => {
   return (
@@ -26,6 +28,11 @@ const ProjectSection = (props) => {
 }
 
 export default function Home() {
+  gsap.registerPlugin(useGSAP);
+
+  useGSAP(() => {
+
+  });
   return (
     <Scroll html>
       <Section>
@@ -124,7 +131,7 @@ export default function Home() {
               Catapult creëert
             </h1>
             <p className="text-white text-lg">
-            I was an intern at Catapult Creëert, a company that creates design and marketing solutions for companies. I was responsible for creating some websites for clients, or fixing some bugs on the website. I really enjoyed my time at Catapult Creëert, I learned a lot about web development, like how to
+            I am an intern at Catapult Creëert, a company that creates design and marketing solutions for companies. I was responsible for creating some websites for clients, or fixing some bugs on the websites. I really enjoyed my time at Catapult Creëert, I learned a lot about web development, like how to
             work with wordpress and php.<br/> Here are a few screenshots of the websites I created.
             </p>
             <CatapultSwiper/>
