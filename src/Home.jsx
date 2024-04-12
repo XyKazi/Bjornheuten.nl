@@ -28,15 +28,11 @@ const ProjectSection = (props) => {
 }
 
 export default function Home() {
-  gsap.registerPlugin(useGSAP);
 
-  useGSAP(() => {
-
-  });
   return (
     <Scroll html>
       <Section>
-      <div className=" w-full h-screen flex flex-col justify-center items-center">
+      <div className=" w-full h-screen flex flex-col justify-center items-center home">
         <div className="flex flex-col gap-[3rem] justify-center items-center w-full xl:w-2/3 2xl:w-1/2 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30  py-16 ">
         <h1 className="text-white font-bold text-5xl xl:text-8xl">Bjorn Heuten</h1>
         <div className="text-white text-lg flex flex-col gap-4 xl:flex-row w-2/3 justify-between">

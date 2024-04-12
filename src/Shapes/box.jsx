@@ -1,7 +1,7 @@
 import { Sphere, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { pointsInner } from "./utils";
+import { pointsInner, JpointsInner, OpointsInner, RpointsInner, NpointsInner } from "./utils";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useState, useLayoutEffect } from "react";
@@ -12,7 +12,7 @@ gsap.registerPlugin(useGSAP);
 
 
 
-const Point = ({ position, color, randomPosition }) => {
+const Point = ({ position, color, randomPosition, Jpunten, Rpunten, Npunten }) => {
     const ref = useRef();
     const data = useScroll();
   useFrame(() => {
@@ -22,7 +22,7 @@ const Point = ({ position, color, randomPosition }) => {
   });
 
     useGSAP(() => {
-
+        animate();
 
 
         gsap.set(ref.current.position, {
@@ -30,25 +30,63 @@ const Point = ({ position, color, randomPosition }) => {
             x: position[0] + Math.random() * 5,
             y: position[1] + Math.random() * 5,
         });
-       gsap.to(ref.current.position, {
-            z: 0,
-            x: position[0],
-            y: position[1],
-            duration: 3,
-            ease: "sine.inOut",
-            onComplete: () => {
-                gsap.to(ref.current.position, {
-                    
-                    x: randomPosition[0],
-                    y: randomPosition[1],
-                    duration: 6,
-                    ease: "power4.inOut",
-                    repeat: -1,
-                    yoyo: true,
+        function animate() {
+            gsap.to(ref.current.position, {
+                z: 0,
+                x: position[0],
+                y: position[1],
+                duration: 3,
+                ease: "sine.inOut",
+                onComplete: () => {
+                    gsap.to(ref.current.position, {
+                        
+                        x: randomPosition[0],
+                        y: randomPosition[1],
+                        duration: 6,
+                        ease: "power4.inOut",
+                        repeat: 0,
+                        yoyo: true,
+                        onComplete: () => {
+                            gsap.to(ref.current.position, {
+                                x: Jpunten[0],
+                                y: Jpunten[1],
+                                duration: 6,
+                                ease: "power4.inOut",
+                                repeat: 0,
+                                yoyo: true,
+                                onComplete: () => {
+                                    gsap.to(ref.current.position, {
+                                        x: Rpunten[0],
+                                        y: Rpunten[1],
+                                        duration: 6,
+                                        ease: "power4.inOut",
+                                        repeat: 0,
+                                        yoyo: true,
+                                        onComplete: () => {
+                                            gsap.to(ref.current.position, {
+                                                x: Npunten[0],
+                                                y: Npunten[1],
+                                                duration: 6,
+                                                ease: "power4.inOut",
+                                                repeat: 0,
+                                                yoyo: true,
+                                                // once it reaches the last point, it will go back to the first point
+                                                onComplete: () => {
+                                                   animate();
+                                                }
+                                            })}
+                                })}
+                            });
+                        }
+                    });
+                },
+            });
+                    }
+       
 
-                });
-            },
-        });
+               
+        
+      
 
     })
     return (
@@ -83,11 +121,17 @@ export default function Box() {
         return array.splice(currentIndex, 1)[0];
         
     }
+
+    var Jpunteninnter = OpointsInner;
     return (
         
             <group >
                 {pointsInner.map((point) => {
-                                        var randomPosition = shuffleArray([...array]).position;
+                                        var randomPosition = shuffleArray([...JpointsInner]).position;
+
+                                        var jpunten = shuffleArray([...OpointsInner]).position;
+                                        var rpunten = shuffleArray([...RpointsInner]).position;
+                                        var npunten = shuffleArray([...NpointsInner]).position;
                                         // remove the randomPosition from the array
                                         array = array.filter((item) => item.position !== randomPosition);
                     return (
@@ -96,6 +140,9 @@ export default function Box() {
                          key={point.idx} 
                          position={point.position} 
                          randomPosition={randomPosition}
+                         Jpunten={jpunten}
+                            Rpunten={rpunten}
+                            Npunten={npunten}
                          color={"white"}/>
                   )
                 } )}
