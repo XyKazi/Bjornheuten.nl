@@ -3,11 +3,13 @@ import CatapultSwiper from "./components/catapult-swiper"
 import HostvioSwiper from "./components/hostvio-swiper"
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useRef } from "react";
+gsap.registerPlugin(useGSAP);
 
 const Section = (props) => {
   return (
     <section
-    className="h-screen flex flex-col justify-center mt-40 md:mt-0 md:p-10"
+    className="h-screen flex flex-col justify-center mt-0 md:p-10"
     >
       <div className="w-full flex items-center justify-center">
             {props.children}
@@ -19,7 +21,7 @@ const Section = (props) => {
 const ProjectSection = (props) => {
   return (
     <section
-    className="flex flex-col justify-center p-md-10 mt-[20vh]">
+    className="flex flex-col justify-center p-md-10 mt-[10vh]">
       <div className="w-full flex items-center justify-center">
         {props.children}
       </div>
@@ -28,11 +30,10 @@ const ProjectSection = (props) => {
 }
 
 export default function Home() {
-
   return (
-    <Scroll html>
+    <Scroll html className="scroll">
       <Section>
-      <div className=" w-full h-screen flex flex-col justify-center items-center home">
+      <div className=" w-full h-screen flex flex-col justify-center gap-12 items-center home">
         <div className="flex flex-col gap-[3rem] justify-center items-center w-full xl:w-2/3 2xl:w-1/2 bg-zinc-800 px-8 rounded-xl shadow-lg bg-opacity-30  py-16 ">
         <h1 className="text-white font-bold text-5xl xl:text-8xl">Bjorn Heuten</h1>
         <div className="text-white text-lg flex flex-col gap-4 xl:flex-row w-2/3 justify-between">
@@ -40,13 +41,12 @@ export default function Home() {
           <p><strong>Education:</strong><br/>MBO 4 Software Developer</p>
           <p><strong>Age:</strong><br/>18 years old</p>
         </div>
-        <div className="flex flex-row gap-3">
-          <a className="text-white text-lg">Projects</a>
-          About me
+
         </div>
+        <span className="border-2 w-10 h-10 animate-bounce rounded-full text-white flex justify-center items-center">&#8615;</span>
+
         </div>
 
-      </div>
 
       </Section>
       <Section>

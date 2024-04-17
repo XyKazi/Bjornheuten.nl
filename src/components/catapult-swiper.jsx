@@ -14,10 +14,8 @@ export default function CatapultSwiper() {
         }}>
             <SwiperSlide><img src="/catapult/screenshot-1.png"/></SwiperSlide>
             <SwiperSlide><img src="/catapult/screenshot-2.png"/></SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            
-        
+            <SwiperSlide><img src="/catapult/screenshot-3.png"/></SwiperSlide>
+            <SwiperSlide><img src="/catapult/screenshot-4.png"/></SwiperSlide>
         </Swiper>
     )
 }

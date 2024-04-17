@@ -13,9 +13,6 @@ export default function HostvioSwiper() {
             delay: 50,
         }}>
             <SwiperSlide><img src="/hostvio/screenshot-1.png"/></SwiperSlide>
-            <SwiperSlide><img src="/catapult/screenshot-2.png"/></SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
             
         
         </Swiper>
