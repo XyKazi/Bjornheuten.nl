@@ -14,12 +14,7 @@ const Point = ({ position, color, randomPosition }) => {
     const data = useScroll();
 
     useFrame(() => {
-        mm.add("(max-width: 1200px)", () => {
-            gsap.set(ref.current.position, {
-                y: ref.current.position.y - 45 + data.offset * 210,
-    //            x: ref.current.position.x - 25,
-            })
-        })
+
         mm.add("(min-width: 1201px", () => {
             gsap.set(ref.current.position, {
                 y: ref.current.position.y - 45 + data.offset * 210,
