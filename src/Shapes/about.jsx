@@ -8,23 +8,18 @@ import { useState } from "react";
 
 
 gsap.registerPlugin(useGSAP);
-let mm = gsap.matchMedia();
 const Point = ({ position, color, randomPosition }) => {
     const ref = useRef();
     const data = useScroll();
 
     useFrame(() => {
 
-        mm.add("(min-width: 1201px", () => {
             gsap.set(ref.current.position, {
                 y: ref.current.position.y - 45 + data.offset * 210,
                 x: ref.current.position.x - 25,
             })
-        })
-
 
     })
-
     useGSAP(() => {
 
 
